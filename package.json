@@ -1,0 +1,20 @@
+{
+  "name": "ts_tuto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sansuke05",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "ts-loader": "^9.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.34.0",
+    "webpack-cli": "^4.6.0"
+  }
+}
