@@ -1,11 +1,15 @@
 import { v4 } from 'uuid';
 import { User } from "./user";
+import { todaysMeal } from "./mail";
 
 const user: User = {
     familyName: "二階堂",
     givenName: "真紅",
     age: 17
 }
+
+const food = 'rise';
+const calories: number = 200;
 
 const contentsElem = document.getElementById('contents');
 if (contentsElem) {
@@ -15,5 +19,6 @@ if (contentsElem) {
 const saibanButton = document.getElementById('saiban') as HTMLButtonElement;
 const uuidSpan = document.getElementById('uuid') as HTMLSpanElement;
 saibanButton.onclick = (e) => {
-    uuidSpan.innerText = v4();
+    const text = todaysMeal(food, calories);
+    uuidSpan.innerText = `id ${v4()} says \"${text}\"`;
 }
